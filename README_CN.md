@@ -9,11 +9,13 @@
 - [ ] 256 ⭐️ 提供用户可直接使用的产品
 
 ## 目录
-- U+1FA75 **项目 1：巨无霸钱包信号监控系统**   
+### **项目 1：巨无霸钱包信号监控系统**   
+
 ![01banner](https://github.com/QuantVela/build-your-onchain-agent/blob/main/img/01banner.png)
 
 简介：10 万个 Solana 钱包信号监控 + AI 自动总结推文，使用 Helius Webhook + Supabase + Vercel + Deepseek。
-[代码](https://github.com/QuantVela/build-your-onchain-agent/tree/main/01-wallets-monitor/wallets-monitor)|[教程](https://github.com/QuantVela/build-your-onchain-agent/blob/main/01-wallets-monitor/README_CN.md)
+
+[代码](https://github.com/QuantVela/build-your-onchain-agent/tree/main/01-wallets-monitor/wallets-monitor) | [教程](https://github.com/QuantVela/build-your-onchain-agent/blob/main/01-wallets-monitor/README_CN.md)
 
 ### 为什么开源
 可能是独自解决了一个没有太多人讨论的问题时的喜悦和寂寥，可能是想在提供流动性之外做一点对社会有用的事，可能是想和链上 AI 科学家这个群体产生更多的连接和可能性。
@@ -22,4 +24,4 @@
 
 钱包监控只是第一步，先掌握链上数据的所有权，希望能借此机会做一个系列，用 agentic workflow 来做更多链上交易的事情。
 
-Twitter DM 开放，欢迎交流：[X:QuantVela](https://x.com/QuantVela)
+Twitter DM 开放，欢迎交流：[QuantVela](https://x.com/QuantVela)

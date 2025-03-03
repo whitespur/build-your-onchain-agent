@@ -1,12 +1,14 @@
-# 打造自己的信号监控系统：0 成本追踪 10 万个 solana 钱包
+# 0 成本追踪 10 万个 solana 钱包
 
 作为链上玩家，我尝试过很多钱包追踪工具，但都不满意。大多数工具只能追踪 300 个以内钱包，完全不够用。于是动手写了一个巨无霸钱包信号监控，理论上可以追踪 10 万个钱包的每月 50 万笔交易。为了屏蔽噪音提炼 Alpha，我结合自己的交易策略增加了市值等筛选条件，还用了 deepseek 来自动总结相关推文。现在打起狗来舒服多了。
+
+![screenshot](https://github.com/QuantVela/build-your-onchain-agent/blob/main/img/01screenshot.png)
 
 用到了这些工具，整个系统基本上 0 成本：
 - helius webhook 来监听订阅的钱包
 - vercel api 路由部署 server
 - supabase 存储和 realtime websocket 监听交易
-- shyft 解析一些 helius 解析不了的交易如： pumpfun 内盘、metaora 池
+- shyft 解析一些 helius 解析不了的交易，如： pumpfun 内盘、metaora 池
 - deepseek 自动总结相关推文
 - telegram bot 发送信号
 
@@ -14,8 +16,7 @@
 ### Step 1: 环境准备
 1. 下载代码库
 ```
-git clone https://github.com/QuantVela/wallets-monitor.git
-cd wallets-monitor
+git clone https://github.com/QuantVela/build-your-onchain-agent.git 01-wallets-monitor/wallets-monitor
 ```
 2. 安装依赖
 ```
@@ -33,7 +34,7 @@ npm install
 ### Step 2: 数据库设置
 1. 创建数据库表
 - 登录 Supabase 控制台，进入 SQL Editor
-- 执行 `schema.sql` 中的 SQL 语句，从而创建了两张表 `txs` 和 `wallets`
+- 执行 `schema.sql` 中的 SQL 语句，从而创建两张表 `txs` 和 `wallets`
 - 把你的钱包库上传到 `wallets` 表，可以用 SQL 脚本也可以导入 CSV
 
 2. 开通 Supabase Realtime
@@ -52,8 +53,7 @@ vercel login
 vercel
 ```
 - 登录 Vercel 控制台，选择你的项目
-- Settings -> Environment Variables
-- 添加 SUPABASE_URL 和 SUPABASE_KEY
+- `Settings` -> `Environment Variables`，添加 SUPABASE_URL 和 SUPABASE_KEY
 - 部署到生产环境
 ```
 vercel --prod
@@ -63,7 +63,7 @@ vercel --prod
 3. 配置 Helius Webhook
 - 在 `.env` 修改 `WEBHOOK_URL` 为你的 Webhook URL，类似 `https://your-project-name.vercel.app/api/route`
 - 运行 `scripts/run.js` 会把 supabase 的 `wallets` 表中的钱包地址设置为 Webhook 的订阅地址
-- 现在检查 Vercel 里的 Logs，预期是在订阅钱包发生新交易时有 200 的 log, 并在 Messages 中显示 Successfully processed and stored with parser
+- 现在检查 Vercel 里的 Logs，预期是在订阅钱包发生新交易时有 200 ok 的 log, 并在 Messages 中显示 Successfully processed and stored with parser
 
 4. 启动监控
 - `src/strategy/index.js` 文件中目前是最基础的策略，当 6 小时内多钱包购买同一个 token, 且 token 的市值超过 100k, 创建时间在 7 天内，则触发 telegram 推送提醒。你可以修改成自己的策略。
@@ -75,7 +75,7 @@ vercel --prod
 在使用 helius 这个场景里，webhook 比私人 RPC 节点要多几百毫秒的延迟，但我的策略并不那么要求速度。如果是需要自动狙击、同一区块内的跟单，可以考虑使用专门的工具或者租用 $499 刀的 Yellowstone RPC。
 
 ## 项目结构
-
+```
 📁 项目根目录
 ├── 📁 src/
 │   ├── 📁 strategy/
@@ -98,7 +98,7 @@ vercel --prod
 └── 📁 scripts/
     ├── 📄 heliusSetup.js         # 管理 helius 的 Webhook 订阅
     └── 📄 run.js                 # 运行 heliusSetup.js 文件
-
+```
 
 
 

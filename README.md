@@ -9,11 +9,13 @@ Roadmap driven by gitHub stars:
 - [ ] 256 ⭐️ Release a user-friendly frontend UI
 
 ## 目录
-- U+1FA75 **Project 1: Massive Wallet Signal Monitoring System**   
+### **Project 1: Massive Wallet Signal Monitoring System**   
+
 ![01banner](https://github.com/QuantVela/build-your-onchain-agent/blob/main/img/01banner.png)
 
 Overview: Tracks 100K Solana wallets + AI-powered tweet summaries using Helius Webhooks, Supabase, Vercel, and DeepSeek.
-[Code](https://github.com/QuantVela/build-your-onchain-agent/tree/main/01-wallets-monitor/wallets-monitor)|[Tutorial](https://github.com/QuantVela/build-your-onchain-agent/blob/main/01-wallets-monitor/README_CN.md)
+
+[Code](https://github.com/QuantVela/build-your-onchain-agent/tree/main/01-wallets-monitor/wallets-monitor) | [Tutorial](https://github.com/QuantVela/build-your-onchain-agent/blob/main/01-wallets-monitor/README.md)
 
 ### Why Open Source?
 Perhaps it's the desire to share the joy and solitude of solving a problem that few have discussed, perhaps it's the desire to contribute something meaningful to world beyond providing liquidity. Or it’s the desire to build more connections with on chain AI developers and exploring new possibilities together.
@@ -22,4 +24,4 @@ I did consider whether sharing this would make the already competitive on-chain 
 
 Wallet monitoring is just the first step, taking ownership of on-chain data. This series will explore agentic workflows for deeper on-chain trading automation.
 
-DMs open on Twitter, let’s connect：[X:QuantVela](https://x.com/QuantVela)
+DMs open on Twitter, let’s connect：[QuantVela](https://x.com/QuantVela)
