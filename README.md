@@ -8,7 +8,9 @@ Roadmap driven by gitHub stars:
 - [ ] 128 ⭐️ Launch an on chain AI developer community
 - [ ] 256 ⭐️ Release a user-friendly frontend UI
 
-## 目录
+My SOL address: C4BzNUty4iEyYm5xR5FzraiAwB9L2xC5CbsHZnQdN9SB
+
+## Contents
 ### **Project 1: Massive Wallet Signal Monitoring System**   
 
 ![01banner](https://github.com/QuantVela/build-your-onchain-agent/blob/main/img/01banner.png)

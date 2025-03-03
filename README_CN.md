@@ -8,6 +8,8 @@
 - [ ] 128 ⭐️ 建立链上 AI 科学家社群
 - [ ] 256 ⭐️ 提供用户可直接使用的产品
 
+SOL 地址: C4BzNUty4iEyYm5xR5FzraiAwB9L2xC5CbsHZnQdN9SB
+
 ## 目录
 ### **项目 1：巨无霸钱包信号监控系统**   
 
@@ -25,3 +27,4 @@
 钱包监控只是第一步，先掌握链上数据的所有权，希望能借此机会做一个系列，用 agentic workflow 来做更多链上交易的事情。
 
 Twitter DM 开放，欢迎交流：[QuantVela](https://x.com/QuantVela)
+
