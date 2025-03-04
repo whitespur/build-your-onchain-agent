@@ -5,7 +5,7 @@ I've been using AI to assist with on-chain trading, also open source some projec
 
 Roadmap driven by gitHub stars:
 - [ ] 64 ⭐️ Community vote on the next project -> [vote here](https://x.com/QuantVela/status/1896874098732765387)
-- [ ] 128 ⭐️ Launch an on chain AI developer community
+- [ ] 128 ⭐️ Launch an on chain AI developer community -> If you want to join our community, send me a DM on [Twitter](https://x.com/quantVela/) with the keyword "build". I'll set up a group chat when we hit 30 members.
 - [ ] 256 ⭐️ Release a user-friendly frontend UI
 
 ## Contents
