@@ -4,7 +4,7 @@ English | [简体中文](README_CN.md)
 I've been using AI to assist with on-chain trading, also open source some project ideas to explore the potential of on-chain agents, from monitoring to trade analysis. My goal is to release a new project every 1-2 weeks.
 
 Roadmap driven by gitHub stars:
-- [ ] 64 ⭐️ Community vote on the next project
+- [ ] 64 ⭐️ Community vote on the next project -> [vote here](https://x.com/QuantVela/status/1896874098732765387)
 - [ ] 128 ⭐️ Launch an on chain AI developer community
 - [ ] 256 ⭐️ Release a user-friendly frontend UI
 
