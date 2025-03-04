@@ -8,8 +8,6 @@
 - [ ] 128 ⭐️ 建立链上 AI 科学家社群
 - [ ] 256 ⭐️ 提供用户可直接使用的产品
 
-SOL 地址: C4BzNUty4iEyYm5xR5FzraiAwB9L2xC5CbsHZnQdN9SB
-
 ## 目录
 ### **项目 1：巨无霸钱包信号监控系统**   
 

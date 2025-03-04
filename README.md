@@ -8,8 +8,6 @@ Roadmap driven by gitHub stars:
 - [ ] 128 ⭐️ Launch an on chain AI developer community
 - [ ] 256 ⭐️ Release a user-friendly frontend UI
 
-My SOL address: C4BzNUty4iEyYm5xR5FzraiAwB9L2xC5CbsHZnQdN9SB
-
 ## Contents
 ### **Project 1: Massive Wallet Signal Monitoring System**   
 
