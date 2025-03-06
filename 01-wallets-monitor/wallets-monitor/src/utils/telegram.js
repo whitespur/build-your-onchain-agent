@@ -6,7 +6,7 @@ dotenv.config();
 // Sends a message to Telegram chat with optional reply functionality
 export async function sendTelegramMessage(message, replyToMessageId = null) {
   const botToken = process.env.TELEGRAM_TOKEN;
-  const channelId = process.env.TELEGRAM_CHAT_ID;
+  const channelId = process.env.TELEGRAM_CHANNEL_ID;
   const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
   try {
@@ -25,7 +25,7 @@ export async function sendTelegramMessage(message, replyToMessageId = null) {
     });
 
     const data = await response.json();
-    // console.log('Telegram response:', data);
+    console.log('sendTelegramMessage message:', message);
     
     if (!data.ok || data.description?.includes('Unknown error')) {
       throw new Error(`Telegram API error: ${data.description || 'Unknown error'}`);

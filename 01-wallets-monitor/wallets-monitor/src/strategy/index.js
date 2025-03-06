@@ -30,13 +30,14 @@ async function checkFilter(tokenAddress) {
       
       // Create and send message to Telegram
       const message = createMsg(tokenInfo, analysis);
+      console.log(`[${getTimeStamp()}] 1111 message is ${JSON.stringify(message)}`);
       const tgResponse = await sendTelegramMessage(message);
-      
+      console.log(`[${getTimeStamp()}] 2222 tgResponse is ${JSON.stringify(tgResponse)}`);
       if (tgResponse?.ok === true) {
         const messageId = tgResponse.result.message_id;
         // Send AI summary message
         await sendSumMessage(tokenInfo, messageId);
-        console.log(`[${getTimeStamp()}] Successfully sent analysis for token ${tokenAddress} to Telegram`);
+        console.log(`[${getTimeStamp()}] 33333 Successfully sent analysis for token ${tokenAddress} to Telegram`);
       } 
     } 
   } catch (error) {
@@ -83,7 +84,9 @@ async function startMonitor() {
           
           // If transactions from other wallets found
           if (data && data.length > 0) {
-            console.log(`[${getTimeStamp()}] Detected new multi-wallet transaction for token: ${tokenOutAddress}`);
+            // console.log(`[${getTimeStamp()}] Detected new multi-wallet transaction for token: ${tokenOutAddress}, account: ${currentAccount},data is ${JSON.stringify(data)}`);
+            console.log(`[${getTimeStamp()}] --------Detected new multi-wallet transaction for token: ${tokenOutAddress}, account: ${currentAccount}`);
+
             // Call filter check function
             await checkFilter(tokenOutAddress);
           }
